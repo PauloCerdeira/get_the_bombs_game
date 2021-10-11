@@ -1,0 +1,52 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Assets/chao.jpg" type="Texture" id=1]
+[ext_resource path="res://Scenes/player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scripts/fase.gd" type="Script" id=5]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 271.539, 74.8561 )
+
+[node name="fase" type="Node2D"]
+script = ExtResource( 5 )
+
+[node name="cenario" type="Sprite" parent="."]
+position = Vector2( 0, -14.6832 )
+scale = Vector2( 0.822081, 1.32053 )
+texture = ExtResource( 1 )
+centered = false
+
+[node name="player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 235.856, 493.969 )
+
+[node name="chao" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chao"]
+position = Vector2( 256.702, 622.909 )
+shape = SubResource( 1 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 22.653
+margin_top = 1.88776
+margin_right = 488.653
+margin_bottom = 64.8878
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Pontos: 0"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 153.0
+margin_top = 77.0
+margin_right = 366.0
+margin_bottom = 166.0
+size_flags_stretch_ratio = 0.0
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
