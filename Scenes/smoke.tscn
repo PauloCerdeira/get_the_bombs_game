@@ -19,11 +19,16 @@ tracks/0/keys = {
 }
 
 [node name="smoke" type="Sprite"]
+position = Vector2( 204.907, 124.726 )
 scale = Vector2( 0.15, 0.15 )
 texture = ExtResource( 1 )
 script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "esmaecer"
 anims/esmaecer = SubResource( 1 )
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
